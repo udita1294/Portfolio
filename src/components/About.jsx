@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import profile_img from '../assets/profile_img.jpeg';
 
 const badge = "px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-sm";
 
@@ -78,9 +79,8 @@ const About = () => {
             {/* glow outline */}
             <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-blue-500 to-indigo-500 opacity-25 blur-xl" />
             <div className="relative h-full rounded-3xl border border-white/10 bg-gradient-to-br from-neutral-900 to-neutral-800 p-6">
-              {/* Replace this block with your image if you have one */}
               <div className="flex h-72 md:h-full items-center justify-center rounded-2xl border border-white/10 bg-[radial-gradient(ellipse_at_top_left,rgba(59,130,246,0.25),transparent_45%),radial-gradient(ellipse_at_bottom_right,rgba(99,102,241,0.25),transparent_45%)]">
-                <span className="text-2xl font-semibold text-gray-300">Photo</span>
+                <img src={profile_img} alt="" srcset="" />
               </div>
             </div>
           </motion.div>

@@ -5,9 +5,9 @@ import project3 from '../assets/project3.png';
 const projects = [
   {
     name: "PlateForward",
-    description: "A platform for surplus food donations.",
+    description: "A platform for surplus food donations. Implemented donor and receiver workflows, secure authentication, and real-time request tracking.",
     image: project1,
-    link: ""
+    link: "https://plate-forward-one.vercel.app"
   },
   {
     name: "Restaurant Application",
