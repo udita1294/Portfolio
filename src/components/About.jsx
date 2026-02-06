@@ -31,24 +31,29 @@ const About = () => {
             viewport={{ once: true }}
           >
             <p className="text-lg leading-8 text-gray-300">
-              I’m a <span className="text-blue-400 font-semibold">Full-Stack Developer</span> specializing in
-              <span className="text-blue-400 font-semibold"> React, Node.js, and MongoDB</span>. I build scalable,
-              responsive, and clean web apps with a strong focus on user experience.
+              I'm a <span className="text-blue-400 font-semibold">Full-Stack Developer</span> and 
+              <span className="text-blue-400 font-semibold"> Machine Learning Enthusiast</span> currently pursuing 
+              my Bachelor's in Computer Science at KIET Group of Institutions with a CGPA of 8.1/10.0. 
+              I specialize in building scalable web applications using the MERN stack and have experience 
+              integrating ML models into production applications.
             </p>
             <p className="mt-4 text-lg leading-8 text-gray-300">
-              I love problem-solving, crafting thoughtful UI, and writing efficient, maintainable code. I’m
-              actively looking for opportunities to contribute to impactful products and grow with a great team.
+              With hands-on experience in React.js, Node.js, MongoDB, and cloud technologies like AWS, 
+              I've developed full-stack applications including a food redistribution platform with ML-powered 
+              decision support. I'm passionate about creating impactful solutions that solve real-world problems 
+              and am always eager to learn and grow with innovative teams.
             </p>
-
 
             {/* badges */}
             <div className="mt-6 flex flex-wrap gap-2">
-              <span className={badge}>React</span>
+              <span className={badge}>React.js</span>
               <span className={badge}>Node.js</span>
               <span className={badge}>MongoDB</span>
-              <span className={badge}>Express</span>
-              <span className={badge}>Tailwind</span>
-              
+              <span className={badge}>Express.js</span>
+              <span className={badge}>Python</span>
+              <span className={badge}>Machine Learning</span>
+              <span className={badge}>AWS</span>
+              <span className={badge}>TypeScript</span>
             </div>
 
             {/* CTA */}
@@ -80,7 +85,7 @@ const About = () => {
             <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-blue-500 to-indigo-500 opacity-25 blur-xl" />
             <div className="relative h-full rounded-3xl border border-white/10 bg-gradient-to-br from-neutral-900 to-neutral-800 p-6">
               <div className="flex h-72 md:h-full items-center justify-center rounded-2xl border border-white/10 bg-[radial-gradient(ellipse_at_top_left,rgba(59,130,246,0.25),transparent_45%),radial-gradient(ellipse_at_bottom_right,rgba(99,102,241,0.25),transparent_45%)]">
-                <img src={profile_img} alt="" srcset="" />
+                <img src={profile_img} alt="Udita Singh" className="w-full h-full object-cover rounded-2xl" />
               </div>
             </div>
           </motion.div>

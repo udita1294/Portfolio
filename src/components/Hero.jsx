@@ -28,12 +28,21 @@ const Hero = () => {
         </motion.h1>
 
         <motion.p
-          className="text-2xl md:text-3xl font-medium mb-6 text-gray-300"
+          className="text-xl md:text-2xl font-medium mb-4 text-gray-300"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.6 }}
         >
-          Full-Stack Developer | React | Node.js | MongoDB
+          Full-Stack Developer | Machine Learning Enthusiast
+        </motion.p>
+        <motion.p
+          className="text-lg md:text-xl mb-6 text-gray-400 max-w-2xl mx-auto"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.8 }}
+        >
+          Building scalable web applications with React, Node.js, and MongoDB. 
+          Passionate about creating impactful solutions with modern technologies.
         </motion.p>
 
         <motion.div
