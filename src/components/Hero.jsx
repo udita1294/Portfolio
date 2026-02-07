@@ -1,75 +1,90 @@
 import { motion } from 'framer-motion';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { HiOutlineChevronDown } from 'react-icons/hi';
 
 const Hero = () => {
+  const socialLinks = [
+    { href: 'https://github.com/udita1294', icon: FaGithub, label: 'GitHub' },
+    { href: 'https://www.linkedin.com/in/udita-singh1294', icon: FaLinkedin, label: 'LinkedIn' },
+    { href: 'mailto:udita1294@gmail.com', icon: FaEnvelope, label: 'Email' },
+  ];
+
   return (
-    <section className="h-screen flex flex-col justify-center items-center text-stone-700 relative overflow-hidden">
+    <section className="min-h-screen flex flex-col justify-center items-center text-stone-800 relative overflow-hidden pt-20">
+      {/* Light gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-stone-50 via-amber-50/30 to-white" />
 
-      {/* Summer gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-orange-50/50 to-amber-100/80"></div>
-
-      {/* Soft glow effects */}
-      <div className="absolute -top-10 -left-10 w-72 h-72 bg-amber-300/30 blur-3xl rounded-full"></div>
-      <div className="absolute bottom-0 right-0 w-72 h-72 bg-orange-200/40 blur-3xl rounded-full"></div>
+      {/* Subtle organic shapes */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-amber-200/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-orange-200/10 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
 
       {/* Content */}
       <motion.div
-        className="relative text-center px-6"
-        initial={{ opacity: 0, y: 40 }}
+        className="relative text-center px-6 max-w-4xl mx-auto z-10"
+        initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1, ease: "easeOut" }}
       >
-        <motion.h1
-          className="text-5xl md:text-6xl font-extrabold mb-4"
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3 }}
+        <motion.span
+          className="inline-block py-1 px-3 rounded-full bg-amber-100/50 border border-amber-200/50 text-amber-900 text-sm font-medium tracking-wider uppercase mb-6"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
         >
-          Hi, I'm <span className="text-amber-600">Udita Singh</span>
+          Hello, I'm
+        </motion.span>
+
+        <motion.h1
+          className="text-5xl sm:text-7xl md:text-8xl font-playfair font-bold mb-6 text-stone-900 tracking-tight leading-tight"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+        >
+          Udita <span className="text-amber-800/90 italic">Singh</span>
         </motion.h1>
 
         <motion.p
-          className="text-xl md:text-2xl font-medium mb-4 text-stone-600"
+          className="text-xl md:text-2xl text-stone-600 max-w-2xl mx-auto leading-relaxed font-light mb-12"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.6 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
         >
-          Full-Stack Developer | Machine Learning Enthusiast
-        </motion.p>
-        <motion.p
-          className="text-lg md:text-xl mb-6 text-stone-500 max-w-2xl mx-auto"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.8 }}
-        >
-          Building scalable web applications with React, Node.js, and MongoDB. 
-          Passionate about creating impactful solutions with modern technologies.
+          Crafting digital experiences with <span className="font-semibold text-amber-900">Code</span> & <span className="font-semibold text-amber-900">Creativity</span>.
+          <br className="hidden md:block" /> Full-Stack Developer & CS Undergrad.
         </motion.p>
 
         <motion.div
-          className="flex gap-4 justify-center mt-4"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.9 }}
+          className="flex justify-center gap-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7, duration: 0.8 }}
         >
-          <motion.a
-            href="#projects"
-            className="px-6 py-3 bg-amber-500 text-white font-semibold rounded-xl shadow-lg shadow-amber-200/50 hover:bg-amber-600 transition"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            View Projects
-          </motion.a>
-
-          <motion.a
-            href="#contact"
-            className="px-6 py-3 border-2 border-amber-400/60 font-semibold rounded-xl text-stone-700 hover:bg-amber-50 transition"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            Contact Me
-          </motion.a>
+          {socialLinks.map(({ href, icon: Icon, label }, i) => (
+            <a
+              key={label}
+              href={href}
+              target={href.startsWith('mailto') ? undefined : '_blank'}
+              rel={href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
+              aria-label={label}
+              className="w-14 h-14 rounded-full bg-white border border-stone-200 flex items-center justify-center text-stone-600 hover:text-amber-800 hover:border-amber-300 hover:scale-110 hover:shadow-lg transition-all duration-300 group"
+            >
+              <Icon className="text-2xl group-hover:-rotate-12 transition-transform duration-300" />
+            </a>
+          ))}
         </motion.div>
       </motion.div>
+
+      {/* Scroll indicator */}
+      <motion.a
+        href="#about"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-stone-400 hover:text-amber-800 transition p-2"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, y: [0, 10, 0] }}
+        transition={{ delay: 1.2, duration: 2, repeat: Infinity, repeatType: "loop" }}
+        aria-label="Scroll to content"
+      >
+        <HiOutlineChevronDown className="w-6 h-6" />
+      </motion.a>
     </section>
   );
 };

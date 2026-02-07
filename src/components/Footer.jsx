@@ -11,10 +11,10 @@ const Footer = () => {
     >
       <p className="text-lg font-medium">© {new Date().getFullYear()} Udita Singh</p>
       <div className="mt-3 space-x-6">
-        <a href="https://www.linkedin.com/in/udita-singh1294" className="hover:text-amber-600 transition">LinkedIn</a>
-        <a href="https://github.com/udita1294" className="hover:text-amber-600">GitHub</a>
-        <a href="mailto:udita1294@gmail.com" className="hover:text-amber-600 transition">Email</a>
-        <a href="https://leetcode.com/u/udita_1294" className="hover:text-amber-600">LeetCode</a>
+        <a href="https://www.linkedin.com/in/udita-singh1294" className="hover:text-amber-800 transition">LinkedIn</a>
+        <a href="https://github.com/udita1294" className="hover:text-amber-800">GitHub</a>
+        <a href="mailto:udita1294@gmail.com" className="hover:text-amber-800 transition">Email</a>
+        <a href="https://leetcode.com/u/udita_1294" className="hover:text-amber-800">LeetCode</a>
       </div>
     </motion.footer>
   );

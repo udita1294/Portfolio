@@ -31,8 +31,8 @@ const About = () => {
             viewport={{ once: true }}
           >
             <p className="text-lg leading-8 text-stone-600">
-              I'm a <span className="text-amber-600 font-semibold">Full-Stack Developer</span> and 
-              <span className="text-amber-600 font-semibold"> Machine Learning Enthusiast</span> currently pursuing 
+              I'm a <span className="text-amber-800 font-semibold">Full-Stack Developer</span> and 
+              <span className="text-amber-800 font-semibold"> Machine Learning Enthusiast</span> currently pursuing 
               my Bachelor's in Computer Science at KIET Group of Institutions with a CGPA of 8.1/10.0. 
               I specialize in building scalable web applications using the MERN stack and have experience 
               integrating ML models into production applications.
@@ -60,7 +60,7 @@ const About = () => {
             <div className="mt-8 flex gap-3">
               <a
                 href="#projects"
-                className="inline-flex items-center justify-center rounded-xl border border-amber-500 bg-amber-500 px-5 py-2.5 font-semibold text-white hover:bg-amber-600 transition shadow-md shadow-amber-200/40"
+                className="inline-flex items-center justify-center rounded-xl border border-amber-600 bg-amber-700 px-5 py-2.5 font-semibold text-white hover:bg-amber-800 transition shadow-md shadow-amber-200/40"
               >
                 View Projects
               </a>

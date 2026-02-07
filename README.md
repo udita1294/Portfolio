@@ -1,3 +1,13 @@
+# Udita Singh – Portfolio
+
+Personal portfolio built with React + Vite.
+
+## Resume download
+
+Place your resume PDF in the `public` folder and name it **`resume.pdf`**. The **Resume** button in the navbar will open it in a new tab when clicked.
+
+---
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

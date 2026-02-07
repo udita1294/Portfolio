@@ -60,7 +60,7 @@ const projects = [
   description: "A responsive and interactive Gemini-style AI chatbot clone built with React that features a smooth conversational UI and can be extended to integrate real AI APIs for dynamic responses.",
   year: "2024",
   image: project3,
-  link: "https://gemini-clone-tan-eight.vercel.app",
+  link: "https://gemini-clone-6ao7.vercel.app",
   technologies: ["React", "React Router", "TailwindCSS", "JavaScript"],
   features: [
     "Clean and responsive chat interface inspired by modern AI assistants",

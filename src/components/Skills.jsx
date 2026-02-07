@@ -45,14 +45,14 @@ const Skills = () => {
   ];
 
   const colorClasses = {
-    blue: "from-amber-100 to-orange-100 border-amber-200/80 text-amber-800",
-    indigo: "from-orange-100 to-amber-100 border-orange-200/80 text-orange-800",
-    purple: "from-rose-100 to-amber-100 border-rose-200/80 text-rose-800",
-    pink: "from-pink-100 to-amber-100 border-pink-200/80 text-pink-800",
-    green: "from-teal-100 to-amber-50 border-teal-200/80 text-teal-800",
-    yellow: "from-yellow-100 to-amber-100 border-yellow-200/80 text-yellow-800",
-    orange: "from-orange-100 to-amber-100 border-orange-200/80 text-orange-800",
-    cyan: "from-cyan-100 to-teal-50 border-cyan-200/80 text-cyan-800"
+    blue: "from-amber-100 to-orange-100 border-amber-200/80 text-amber-900",
+    indigo: "from-orange-100 to-amber-100 border-orange-200/80 text-orange-900",
+    purple: "from-rose-100 to-amber-100 border-rose-200/80 text-rose-900",
+    pink: "from-pink-100 to-amber-100 border-pink-200/80 text-pink-900",
+    green: "from-stone-100 to-amber-50 border-stone-200/80 text-stone-800",
+    yellow: "from-yellow-100 to-amber-100 border-yellow-200/80 text-amber-900",
+    orange: "from-orange-100 to-amber-100 border-orange-200/80 text-orange-900",
+    cyan: "from-orange-50 to-amber-50 border-orange-200/80 text-amber-900"
   };
 
   return (
@@ -76,18 +76,20 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <motion.div
               key={index}
-              className={`relative rounded-2xl border bg-gradient-to-br ${colorClasses[category.color]} backdrop-blur-sm p-6 shadow-lg shadow-amber-100/50`}
+              className={`relative rounded-xl border border-stone-200 bg-white/60 backdrop-blur-md p-8 hover:shadow-xl hover:shadow-stone-200/40 transition-all duration-300 group`}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-bold mb-4 text-stone-800">{category.title}</h3>
+              <div className={`absolute left-0 top-8 w-1 h-8 rounded-r-full bg-gradient-to-b ${colorClasses[category.color]}`} />
+              
+              <h3 className="text-xl font-playfair font-bold mb-6 text-stone-800 pl-4">{category.title}</h3>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1.5 rounded-lg bg-white/80 border border-amber-200/60 text-sm font-medium text-stone-700 shadow-sm"
+                    className="px-4 py-1.5 rounded-full bg-white border border-stone-200/80 text-sm font-medium text-stone-600 shadow-sm group-hover:border-amber-200 group-hover:text-amber-900 transition-colors"
                   >
                     {skill}
                   </span>

@@ -70,7 +70,7 @@ const Education = () => {
               <div className="flex flex-col md:flex-row gap-6">
                 {/* Icon */}
                 <div className="flex-shrink-0">
-                  <div className="w-16 h-16 rounded-xl bg-amber-100 border border-amber-200/80 flex items-center justify-center text-amber-600">
+                  <div className="w-16 h-16 rounded-xl bg-amber-100 border border-amber-200/80 flex items-center justify-center text-amber-800">
                     {edu.icon}
                   </div>
                 </div>
@@ -78,19 +78,19 @@ const Education = () => {
                 {/* Content */}
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold text-stone-800 mb-2">{edu.institution}</h3>
-                  <p className="text-lg text-amber-700 font-semibold mb-2">{edu.degree}</p>
+                  <p className="text-lg text-amber-800 font-semibold mb-2">{edu.degree}</p>
                   <div className="flex flex-wrap gap-4 text-stone-500 mb-4">
                     <span className="flex items-center gap-2">
-                      <span className="text-amber-500">📍</span>
+                      <span className="text-amber-600">📍</span>
                       {edu.location}
                     </span>
                     <span className="flex items-center gap-2">
-                      <span className="text-amber-500">📅</span>
+                      <span className="text-amber-600">📅</span>
                       {edu.period}
                     </span>
                     {edu.cgpa && (
                       <span className="flex items-center gap-2">
-                        <span className="text-amber-500">⭐</span>
+                        <span className="text-amber-600">⭐</span>
                         {edu.cgpa}
                       </span>
                     )}

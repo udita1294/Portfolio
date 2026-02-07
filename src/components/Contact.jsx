@@ -50,7 +50,7 @@ const Contact = () => {
             ></textarea>
           </div>
 
-          <button className="w-full bg-amber-500 hover:bg-amber-600 text-white font-semibold py-3 rounded-xl transition shadow-md shadow-amber-200/40">
+          <button className="w-full bg-amber-700 hover:bg-amber-800 text-white font-semibold py-3 rounded-xl transition shadow-md shadow-amber-200/40">
             Send Message
           </button>
         </motion.form>
@@ -63,9 +63,9 @@ const Contact = () => {
           transition={{ delay: 0.3, duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <a href="https://github.com/udita1294" className="hover:text-amber-600 transition"><FaGithub /></a>
-          <a href="https://www.linkedin.com/in/udita-singh1294" className="hover:text-amber-600 transition"><FaLinkedin /></a>
-          <a href="mailto:udita1294@gmail.com" className="hover:text-amber-600 transition"><FaEnvelope /></a>
+          <a href="https://github.com/udita1294" className="hover:text-amber-700 transition"><FaGithub /></a>
+          <a href="https://www.linkedin.com/in/udita-singh1294" className="hover:text-amber-700 transition"><FaLinkedin /></a>
+          <a href="mailto:udita1294@gmail.com" className="hover:text-amber-700 transition"><FaEnvelope /></a>
         </motion.div>
       </div>
     </section>
