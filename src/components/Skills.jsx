@@ -24,7 +24,7 @@ const Skills = () => {
     },
     {
       title: "Cloud",
-      skills: ["AWS (Certified CloudPractitioner)", "Git/GitHub", "Vercel","Render", "Netlify"],
+      skills: ["AWS (Certified Cloud Practitioner)", "Git/GitHub", "Vercel","Render", "Netlify"],
     },
     {
       title: "Tools & Technologies",

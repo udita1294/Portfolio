@@ -11,7 +11,7 @@ const projects = [
     year: "2025",
     image: project1,
     link: "https://plate-forward-one.vercel.app",
-    technologies: ["MongoDB", "Express.js", "React.js", "Node.js", "FastAPI", "Scikit-learn"],
+    technologies: ["MongoDB", "Express.js", "React.js", "Node.js", "FastAPI", "Scikit-learn","Socket.IO", "Leaflet", "Multer", "Cloudinary"],
     features: [
       "Full-stack MERN application connecting food donors, receivers, volunteers, and admins",
       "Machine Learning models for enhanced decision-making and reduced food wastage",
@@ -29,7 +29,7 @@ const projects = [
     year: "2025",
     image: project2,
     link: "https://restaurant-app-i9xw.onrender.com",
-    technologies: ["MongoDB", "Express.js", "React.js", "Node.js"],
+    technologies: ["MongoDB", "Express.js", "React.js", "Node.js","Multer"],
     features: [
       "Full-stack MERN stack implementation",
       "JWT-based authentication system with role-based access control",
