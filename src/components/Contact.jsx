@@ -38,7 +38,6 @@ const Contact = () => {
               <input
                 type="text"
                 className="w-full bg-stone-50 border border-stone-200 rounded-lg px-4 py-3 text-stone-900 placeholder-stone-400 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all"
-                placeholder="John Doe"
               />
             </div>
 
@@ -47,7 +46,6 @@ const Contact = () => {
               <input
                 type="email"
                 className="w-full bg-stone-50 border border-stone-200 rounded-lg px-4 py-3 text-stone-900 placeholder-stone-400 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all"
-                placeholder="john@example.com"
               />
             </div>
 
@@ -56,7 +54,6 @@ const Contact = () => {
               <textarea
                 rows="4"
                 className="w-full bg-stone-50 border border-stone-200 rounded-lg px-4 py-3 text-stone-900 placeholder-stone-400 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all resize-none"
-                placeholder="Tell me about your project..."
               ></textarea>
             </div>
 
