@@ -3,28 +3,32 @@ import { motion } from 'framer-motion';
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Select Languages",
-      skills: ["JavaScript (ES6+)", "TypeScript", "Python", "C++", "SQL"],
+      title: "Programming Languages",
+      skills: ["JavaScript", "C++", "Python", "C++"],
     },
     {
-      title: "Frontend Engineering",
-      skills: ["React.js", "Next.js", "Tailwind CSS", "Framer Motion", "Redux Toolkit"],
+      title: "Frontend Technologies",
+      skills: ["React.js", "HTML5", "CSS3", "Tailwind CSS", "Framer Motion"],
     },
     {
       title: "Backend Architecture",
-      skills: ["Node.js", "Express.js", "FastAPI", "REST APIs", "Microservices"],
+      skills: ["Node.js", "Express.js", "FastAPI", "RESTful APIs", "TypeScript"],
     },
     {
-      title: "Data & ML",
-      skills: ["MongoDB", "PostgreSQL", "Scikit-learn", "Pandas", "NumPy", "TensorFlow"],
+      title: "Machine Learning",
+      skills: ["Scikit-learn", "Pandas", "NumPy", "Classification", "Regression", "Clustering"],
     },
     {
-      title: "DevOps & Cloud",
-      skills: ["AWS (Certified Practitioner)", "Docker", "CI/CD", "Git/GitHub", "Vercel"],
+      title: "Database",
+      skills: ["MongoDB", "Mongoose ODM","PostgreSQL", "Oracle"],
     },
     {
-      title: "Tools & Workflow",
-      skills: ["VS Code", "Postman", "Figma", "Jira", "Agile Methodologies"],
+      title: "Cloud",
+      skills: ["AWS (Certified CloudPractitioner)", "Git/GitHub", "Vercel","Render", "Netlify"],
+    },
+    {
+      title: "Tools & Technologies",
+      skills: ["VS Code", "Postman", "Multer","JWT Authentication", "Cloudinary","Clerk Authentication"],
     }
   ];
 
