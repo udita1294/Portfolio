@@ -76,20 +76,18 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <motion.div
               key={index}
-              className={`relative rounded-xl border border-stone-200 bg-white/60 backdrop-blur-md p-8 hover:shadow-xl hover:shadow-stone-200/40 transition-all duration-300 group`}
+              className={`relative rounded-2xl border bg-gradient-to-br ${colorClasses[category.color]} backdrop-blur-sm p-6 shadow-lg shadow-amber-100/50`}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <div className={`absolute left-0 top-8 w-1 h-8 rounded-r-full bg-gradient-to-b ${colorClasses[category.color]}`} />
-              
-              <h3 className="text-xl font-playfair font-bold mb-6 text-stone-800 pl-4">{category.title}</h3>
+              <h3 className="text-xl font-bold mb-4 text-stone-800">{category.title}</h3>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, idx) => (
                   <span
                     key={idx}
-                    className="px-4 py-1.5 rounded-full bg-white border border-stone-200/80 text-sm font-medium text-stone-600 shadow-sm group-hover:border-amber-200 group-hover:text-amber-900 transition-colors"
+                    className="px-3 py-1.5 rounded-lg bg-white/80 border border-amber-200/60 text-sm font-medium text-stone-700 shadow-sm"
                   >
                     {skill}
                   </span>

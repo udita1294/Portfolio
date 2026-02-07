@@ -24,39 +24,39 @@ const Projects = () => {
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              className="group relative rounded-2xl border border-stone-200 bg-white/50 backdrop-blur-sm overflow-hidden hover:shadow-2xl hover:shadow-amber-100/50 transition-all duration-500 hover:-translate-y-2"
+              className="group relative rounded-2xl border border-amber-200/60 bg-white/80 backdrop-blur-sm overflow-hidden shadow-lg shadow-amber-100/50 hover:border-amber-400/60 transition-all duration-300"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
             >
               {/* Image */}
-              <div className="relative h-56 overflow-hidden">
+              <div className="relative h-48 overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={project.name} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" 
                 />
-                <div className="absolute inset-0 bg-stone-900/10 group-hover:bg-stone-900/0 transition-colors duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-900/40 to-transparent" />
                 <div className="absolute top-4 right-4">
-                  <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur-md text-stone-800 text-xs font-bold shadow-sm uppercase tracking-wider">
+                  <span className="px-3 py-1 rounded-lg bg-amber-700/95 backdrop-blur-sm text-white text-sm font-semibold shadow-md">
                     {project.year}
                   </span>
                 </div>
               </div>
 
               {/* Content */}
-              <div className="p-8">
-                <h3 className="text-3xl font-playfair font-bold text-stone-800 mb-2 group-hover:text-amber-800 transition-colors">{project.name}</h3>
-                <p className="text-amber-700 font-medium mb-4 text-sm uppercase tracking-wide">{project.subtitle}</p>
-                <p className="text-stone-600 mb-6 leading-relaxed font-light">{project.description}</p>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-stone-800 mb-2">{project.name}</h3>
+                <p className="text-amber-800 font-semibold mb-3">{project.subtitle}</p>
+                <p className="text-stone-600 mb-4 leading-relaxed">{project.description}</p>
 
                 {/* Technologies */}
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 rounded-full bg-stone-100 border border-stone-200 text-xs font-medium text-stone-600 group-hover:bg-amber-50 group-hover:border-amber-100 group-hover:text-amber-800 transition-colors"
+                      className="px-3 py-1 rounded-lg bg-amber-100/80 border border-amber-200/60 text-xs text-stone-600"
                     >
                       {tech}
                     </span>
@@ -64,11 +64,11 @@ const Projects = () => {
                 </div>
 
                 {/* Features */}
-                <div className="mb-6 pt-4 border-t border-stone-100">
+                <div className="mb-4">
                   <ul className="space-y-2">
                     {project.features.slice(0, 3).map((feature, idx) => (
                       <li key={idx} className="text-sm text-stone-500 flex items-start gap-2">
-                        <span className="text-amber-500 mt-1.5 text-[10px]">●</span>
+                        <span className="text-amber-600 mt-1">•</span>
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -80,10 +80,10 @@ const Projects = () => {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 group/link text-amber-800 font-semibold hover:text-amber-600 transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-700 hover:bg-amber-800 text-white font-semibold transition-colors shadow-md shadow-amber-200/40"
                 >
-                  <span className="border-b border-transparent group-hover/link:border-amber-600 transition-all">View Project</span>
-                  <FaExternalLinkAlt className="text-xs transform group-hover/link:translate-x-1 transition-transform" />
+                  <span>View Project</span>
+                  <FaExternalLinkAlt className="text-sm" />
                 </a>
               </div>
             </motion.div>

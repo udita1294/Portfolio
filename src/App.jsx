@@ -9,8 +9,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App relative">
-      <div className="bg-noise" />
+    <div className="App">
       <Navbar />
       <Hero />
       <About />
