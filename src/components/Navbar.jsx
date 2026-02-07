@@ -12,10 +12,8 @@ const Navbar = () => {
       <div className="hidden md:flex space-x-6 text-stone-600">
         <a href="#about" className="hover:text-amber-600 transition">About</a>
         <a href="#skills" className="hover:text-amber-600 transition">Skills</a>
-        <a href="#education" className="hover:text-amber-600 transition">Education</a>
-        <a href="#experience" className="hover:text-amber-600 transition">Experience</a>
         <a href="#projects" className="hover:text-amber-600 transition">Projects</a>
-        <a href="#certifications" className="hover:text-amber-600 transition">Achievements</a>
+        <a href="#education" className="hover:text-amber-600 transition">Education</a>
         <a href="#contact" className="hover:text-amber-600 transition">Contact</a>
       </div>
       <div className="md:hidden text-stone-600">
