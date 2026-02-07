@@ -1,35 +1,97 @@
-import { motion } from 'framer-motion';
+import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
+import { useState } from 'react';
+import { HiMenuAlt3, HiX } from 'react-icons/hi';
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setScrolled(latest > 50);
+  });
+
+  const links = [
+    { href: "#about", label: "About" },
+    { href: "#skills", label: "Skills" },
+    { href: "#projects", label: "Projects" },
+    { href: "#education", label: "Education" },
+    { href: "#contact", label: "Contact" },
+  ];
+
   return (
     <motion.nav
-      className="fixed w-full bg-white/90 backdrop-blur-md px-6 py-4 flex justify-between items-center z-50 border-b border-stone-200/80 shadow-sm"
-      initial={{ y: -50, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled 
+          ? "bg-white/80 backdrop-blur-lg border-b border-stone-200/50 py-3 shadow-sm" 
+          : "bg-transparent py-5"
+      }`}
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <a href="#" className="text-xl font-bold text-amber-800 tracking-tight">U.S.</a>
-      <div className="hidden md:flex items-center gap-8">
-        <a href="#about" className="text-stone-600 hover:text-amber-700 transition font-medium">About</a>
-        <a href="#skills" className="text-stone-600 hover:text-amber-700 transition font-medium">Skills</a>
-        <a href="#projects" className="text-stone-600 hover:text-amber-700 transition font-medium">Projects</a>
-        <a href="#education" className="text-stone-600 hover:text-amber-700 transition font-medium">Education</a>
-        <a href="#contact" className="text-stone-600 hover:text-amber-700 transition font-medium">Contact</a>
-        <a
-          href="/resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="ml-2 px-5 py-2.5 bg-amber-700 text-white font-semibold rounded-lg hover:bg-amber-800 transition shadow-md"
+      <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
+        <a href="#" className="flex items-center gap-2 group">
+          <span className="w-10 h-10 bg-amber-900 text-amber-50 rounded-xl flex items-center justify-center font-playfair font-bold text-xl group-hover:bg-amber-800 transition-colors">U.</span>
+          <span className="font-playfair font-bold text-stone-800 text-lg hidden sm:block">Udita Singh</span>
+        </a>
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center gap-8">
+          {links.map((link) => (
+            <a 
+              key={link.label}
+              href={link.href} 
+              className="relative text-stone-600 hover:text-stone-900 font-medium text-sm transition-colors py-1 group"
+            >
+              {link.label}
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-600 group-hover:w-full transition-all duration-300" />
+            </a>
+          ))}
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-4 px-5 py-2.5 bg-stone-900 text-white font-medium rounded-lg text-sm hover:bg-amber-900 transition-colors shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform duration-200"
+          >
+            Resume
+          </a>
+        </div>
+
+        {/* Mobile Toggle */}
+        <button 
+          onClick={() => setIsOpen(!isOpen)} 
+          className="md:hidden text-stone-800 p-2"
         >
-          Resume
-        </a>
+          {isOpen ? <HiX size={24} /> : <HiMenuAlt3 size={24} />}
+        </button>
       </div>
-      <div className="md:hidden flex items-center gap-3">
-        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-amber-700 text-white font-semibold rounded-lg text-sm">
-          Resume
-        </a>
-        <a href="#contact" className="text-stone-600 hover:text-amber-700 transition font-medium">Contact</a>
-      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <motion.div 
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: 'auto' }}
+          exit={{ opacity: 0, height: 0 }}
+          className="md:hidden bg-white border-t border-stone-100"
+        >
+          <div className="flex flex-col p-6 gap-4">
+             {links.map((link) => (
+              <a 
+                key={link.label}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="text-stone-600 font-medium hover:text-amber-800"
+              >
+                {link.label}
+              </a>
+            ))}
+            <a href="/resume.pdf" target="_blank" className="text-center py-3 bg-stone-900 text-white rounded-lg font-medium">
+              Resume
+            </a>
+          </div>
+        </motion.div>
+      )}
     </motion.nav>
   );
 };
