@@ -2,8 +2,28 @@ import project1 from '../assets/project1.png';
 import project2 from '../assets/project2.png';
 import project3 from '../assets/project3.png';
 import project4 from '../assets/project4.png';
+import project5 from '../assets/project5.png';
 
 const projects = [
+   {
+  name: "IntervAI",
+  subtitle: "AI-Powered Interview Preparation Platform",
+  description: "Full-stack AI SaaS platform that analyzes resumes and job descriptions to generate interview questions, skill-gap insights, and job-fit scores using Google Gemini.",
+  year: "2026",
+  image: project5,
+  link: "https://github.com/udita1294/AI-Interview-Preparation-Platform",
+  technologies: ["MongoDB","Express.js","TypeScript","Node.js","Google Gemini API","Zod","JWT","Multer","pdf-parse"],
+  features: [
+    "AI-powered interview preparation platform that analyzes uploaded resumes and job descriptions",
+    "Generates tailored technical and behavioral interview questions using Google Gemini LLM",
+    "Provides skill-gap analysis and a 0–100 job-fit match score to guide candidate preparation",
+    "Schema-enforced LLM responses using Zod mapped to JSON Schema for type-safe backend processing",
+    "Secure JWT authentication using HTTP-only cookies with token blacklist strategy",
+    "Resume upload and parsing using Multer in-memory storage and pdf-parse",
+    "RESTful API with protected routes and strict Mongoose schema validation",
+    "Interview report history system allowing users to store, retrieve, and manage previous sessions"
+  ]
+},
   {
     name: "Plate Forward",
     subtitle: "Surplus Food Donation Platform",
