@@ -3,6 +3,7 @@ import project2 from '../assets/project2.png';
 import project3 from '../assets/project3.png';
 import project4 from '../assets/project4.png';
 import project5 from '../assets/project5.png';
+import project6 from '../assets/project6.png';
 
 const projects = [
    {
@@ -42,6 +43,36 @@ const projects = [
       "Image upload functionality using Multer and Cloudinary"
     ]
   },
+  {
+  name: "Collaborative Code Editor",
+  subtitle: "Real-Time Multi-User Code Editing Platform",
+  description:
+    "A full-stack real-time collaborative code editor that allows multiple users to write and edit code simultaneously using CRDT-based synchronization with Yjs and WebSockets.",
+  year: "2026",
+  image: project6,
+  link: "https://github.com/udita1294/Collaborative_Editor",
+  technologies: [
+    "React.js",
+    "Node.js",
+    "Express.js",
+    "Socket.IO",
+    "Yjs",
+    "y-socket.io",
+    "Monaco Editor",
+    "Docker"
+  ],
+  features: [
+    "Real-time collaborative editing using Yjs (CRDT-based conflict-free synchronization)",
+    "Multi-user editing with live cursor and content updates",
+    "Monaco Editor integration (VS Code-like coding experience)",
+    "WebSocket communication using Socket.IO for low-latency updates",
+    "Room-based collaboration system for multiple sessions",
+    "Optimized state synchronization ensuring consistency across users",
+    "Scalable backend architecture using Express.js",
+    "Dockerized application for easy setup and deployment",
+    "Responsive and clean UI for seamless coding experience"
+  ]
+},
   {
     name: "Restaurant Management Application",
     subtitle: "Full-Stack MERN Application",
