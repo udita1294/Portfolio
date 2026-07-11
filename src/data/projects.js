@@ -14,7 +14,7 @@ const projects = [
   year: "2026",
   image: project7,
   link: "https://github.com/udita1294/Distributed-Rate-Limiter",
-  technologies: ["Node.js","Express.js","Redis","JavaScript"],
+  technologies: ["Node.js","Express.js","Redis","JavaScript","Docker"],
   features: [
     "Implements Fixed Window, Sliding Window Log, Token Bucket, and Leaky Bucket rate limiting algorithms",
     "Uses Redis as a centralized distributed data store to ensure rate limits are shared across multiple server instances",
