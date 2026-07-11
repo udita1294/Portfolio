@@ -4,8 +4,28 @@ import project3 from '../assets/project3.png';
 import project4 from '../assets/project4.png';
 import project5 from '../assets/project5.png';
 import project6 from '../assets/project6.png';
+import project7 from '../assets/project7.png';
 
 const projects = [
+  {
+  name: "Distributed Rate Limiter",
+  subtitle: "High-Performance Express.js Rate Limiting Library",
+  description: "A configurable distributed rate limiter built with Express.js and Redis that supports multiple algorithms, custom key generation, response headers, and production-ready middleware.",
+  year: "2026",
+  image: project6,
+  link: "https://github.com/udita1294/Distributed-Rate-Limiter",
+  technologies: ["Node.js","Express.js","Redis","JavaScript"],
+  features: [
+    "Implements Fixed Window, Sliding Window Log, Token Bucket, and Leaky Bucket rate limiting algorithms",
+    "Uses Redis as a centralized distributed data store to ensure rate limits are shared across multiple server instances",
+    "Supports configurable request limits, time windows, refill rates, and bucket capacities",
+    "Provides custom key generators for rate limiting by IP address, user ID, API key, or any custom identifier",
+    "Adds standard HTTP rate limit response headers (X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset)",
+    "Returns configurable 429 Too Many Requests responses with custom error messages",
+    "Includes reusable Express middleware with strategy-based algorithm selection for easy integration",
+    "Built with modular architecture, centralized configuration validation, and comprehensive error handling for production-ready APIs"
+  ]
+},
    {
   name: "IntervAI",
   subtitle: "AI-Powered Interview Preparation Platform",
