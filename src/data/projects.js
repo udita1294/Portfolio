@@ -12,7 +12,7 @@ const projects = [
   subtitle: "High-Performance Express.js Rate Limiting Library",
   description: "A configurable distributed rate limiter built with Express.js and Redis that supports multiple algorithms, custom key generation, response headers, and production-ready middleware.",
   year: "2026",
-  image: project6,
+  image: project7,
   link: "https://github.com/udita1294/Distributed-Rate-Limiter",
   technologies: ["Node.js","Express.js","Redis","JavaScript"],
   features: [
