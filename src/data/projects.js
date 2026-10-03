@@ -6,7 +6,29 @@ import project5 from '../assets/project5.png';
 import project6 from '../assets/project6.png';
 import project7 from '../assets/project7.png';
 
+
 const projects = [
+  {
+  name: "Codebase RAG",
+  subtitle: "AI-Powered Codebase Understanding & Retrieval System",
+  description: "An AI-powered codebase analysis system built with Retrieval-Augmented Generation (RAG) that enables developers to query GitHub repositories, understand code architecture, explore dependencies, and retrieve context-aware answers using vector search and LLMs.",
+  year: "2026",
+  image: project8,
+  link: "https://github.com/udita1294/CodeBase_RAG",
+  technologies: ["Python","RAG", "Qdrant", "Sentence Transformers", "Groq", "Streamlit", "Tavily"],
+  features: [
+    "Ingests and analyzes GitHub repositories by cloning source code, scanning files, and splitting code into semantically meaningful chunks",
+    "Implements Retrieval-Augmented Generation (RAG) to provide context-aware answers to natural language queries about codebases",
+    "Uses Sentence Transformers (all-MiniLM-L6-v2) to generate 384-dimensional embeddings for semantic code search",
+    "Integrates Qdrant vector database for efficient storage, indexing, and retrieval of code embeddings",
+    "Leverages Groq-hosted LLMs to generate responses grounded in retrieved code snippets and repository context",
+    "Supports repository-level question answering to explain code functionality, identify implementations, and understand application workflows",
+    "Integrates Tavily for web search to supplement retrieved code context with relevant external information",
+    "Provides an interactive Streamlit interface for repository ingestion and conversational codebase exploration",
+    "Uses modular components for repository scanning, document processing, embedding generation, vector retrieval, and LLM-based response generation"
+  ]
+  },
+
   {
   name: "Distributed Rate Limiter",
   subtitle: "High-Performance Express.js Rate Limiting Library",
