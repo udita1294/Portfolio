@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import profile_img from '../assets/profile_img.jpeg';
+import profile_img from '../assets/profile_img.png';
 
 const badge = "px-3 py-1 rounded-lg bg-amber-100 border border-amber-200/80 text-stone-600 text-sm";
 
@@ -35,17 +35,17 @@ const About = () => {
             </h3>
             <p className="text-lg leading-relaxed text-stone-600 mb-6">
               I'm a <span className="text-amber-800 font-semibold">Full-Stack Developer</span> and 
-              <span className="text-amber-800 font-semibold"> Machine Learning Enthusiast</span> pursuing 
-              my Bachelor's in Computer Science at KIET Group of Institutions. My journey is driven by a curiosity to solve complex problems through elegant code.
+              <span className="text-amber-800 font-semibold"> AI Enthusiast</span> pursuing 
+              my Bachelor's in Computer Science at KIET Group of Institutions. Passionate about solving real-world problems, I enjoy building scalable applications and exploring the potential of AI to create meaningful solutions.
             </p>
             <p className="text-lg leading-relaxed text-stone-600 mb-8">
-              I specialize in the <span className="font-medium text-stone-800">MERN stack</span> and cloud technologies. Whether it's architecting a scalable backend or fine-tuning a neural network, I thrive on the challenge of building software that matters.
+              I specialize in the <span className="font-medium text-stone-800">MERN stack, Backend Development, and AI/ML</span> with a growing focus on LLMs, RAG systems, and cloud technologies. From designing robust APIs to building intelligent applications, I love turning complex ideas into efficient, user-centric software.
             </p>
 
             {/* badges */}
             <h4 className="text-sm font-bold text-stone-400 uppercase tracking-widest mb-4">Tech Arsenal</h4>
             <div className="flex flex-wrap gap-2 mb-10">
-              {["React.js", "Node.js", "MongoDB", "Express.js", "Python", "Machine Learning", "AWS", "TypeScript"].map((tech) => (
+              {["React.js", "Node.js", "MongoDB", "Express.js", "Python","C++","JavaScript","RAG","Qdrant","PostgreSQL","Redis", "Machine Learning", "AWS","Docker", "Tailwind CSS"].map((tech) => (
                 <span key={tech} className="px-4 py-1.5 rounded-full bg-stone-100 border border-stone-200 text-stone-700 text-sm font-medium hover:bg-stone-200 transition-colors">
                   {tech}
                 </span>
